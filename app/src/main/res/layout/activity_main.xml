@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/activity_main_background"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,19 +14,22 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Welcome"
-        android:textSize="34sp"
+        android:textColor="#F6F6F6"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
 
     <Button
         android:id="@+id/StartbuttonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="START"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="575dp" />
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="417dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
