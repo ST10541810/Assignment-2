@@ -7,36 +7,45 @@ import androidx.activity.enableEdgeToEdge
 class questionActivity : AppCompatActivity() {
 
     // keeps track of the current question index
-     var = currentIndex = 0
+    var = currentIndex = 0
 
     // stores the users score
-     var score = 0
+    var score = 0
 
     // UI components
-     var questionText: textview
-     var feedBack: textView
-     var nextButton: Button
+    var questionText: textview
+    var feedBack: textView
+    var nextButton: Button
 
-     // Link UI elements with XML
-     questionText = findViewById(R.id.questionText)
-     feedbackText = findViewById(R.id.feedbackText)
-     nextButton = findViewBy(R.id.nextButton)
+    // Link UI elements with XML
+    questionText = findViewById(R.id.questionText)
+    feedbackText = findViewById(R.id.feedbackText)
+    nextButton = findViewBy(R.id.nextButton)
 
-     val hackButton = findViewById<button>(R.id.hackButton)
-     val mythbutton = findViewById<Button>(R.id.mythbutton)
+    val hackButton = findViewById<button>(R.id.hackButton)
+    val mythbutton = findViewById<Button>(R.id.mythbutton)
 
     // Load the first question when activity starts
     loadQuestion()
 
     // set click listeners for answer buttons
-    hackbutton.setOnClickListener { checkAnswer(true) }
-    mythutton.setOnclickListener { checkAnswer(false) }
+    hackbutton.setOnClickListener
+    { checkAnswer(true) }
+    mythutton.setOnclickListener
+    { checkAnswer(false) }
 
     // Move to next question when Button is clicked
-    nextButton.setOnClickListener {
-          currentIndex++
+    nextButton.setOnClickListener
+    {
+        currentIndex++
 
-        
+        // check if there are more questions
+        if (currentIndex < QuestionBank.question.size)
+    }
+    loadQuestion()
+    feedbackText.text = ""
+ } else {
+     
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
