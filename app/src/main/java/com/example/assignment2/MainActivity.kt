@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //
+        // added a start button to switch to another class
         val startButton = findViewById<Button>(R.id.StartbuttonId)
 
 
