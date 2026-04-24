@@ -1,5 +1,6 @@
 package com.example.assignment2
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,13 @@ class MainActivity : AppCompatActivity() {
 
         // added a start button to switch to another class
         val startButton = findViewById<Button>(R.id.StartbuttonId)
+
+        // added a val intent to switch from one class to another
+        startButton. setOnClickListener
+            val intent = Intent( this, questionActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
