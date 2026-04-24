@@ -15,7 +15,7 @@ class questionActivity : AppCompatActivity() {
     // UI components
     var questionText: textview
     var feedBack: textView
-    var nextButton: Button
+    var nextButton: Button  .
 
     // Link UI elements with XML
     questionText = findViewById(R.id.questionText)
@@ -45,8 +45,12 @@ class questionActivity : AppCompatActivity() {
     loadQuestion()
     feedbackText.text = ""
  } else {
-     
-    }
+
+     // navigate to result screen when quiz ends
+     val intent = intent("this", ResultActivity::class.java )
+    intent.putExtra("score", score)
+    intent.putExtra("total",quetionBank.questionBank.question.size)
+    intent.putExtra("answes", answers, answers.tobooleanArray(  ))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

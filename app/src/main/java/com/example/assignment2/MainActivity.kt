@@ -19,7 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         // added a val intent to switch from one class to another
         startButton.setOnClickListener {
-            val intent = Intent( this, QuizActivity::class.java)
+
+
+
+
+
+            val intent = Intent( this, QuizActivity::class.java       jnmkk)
             startActivity(intent)
 
 
