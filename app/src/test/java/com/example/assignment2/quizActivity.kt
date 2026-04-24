@@ -16,7 +16,10 @@ class questionActivity : AppCompatActivity() {
      var questionText: textview
      var feedBack: textView
      var nextButton: Button
-     
+
+     // Link UI elements with XML
+     questionText = findViewById(R.id.questionText)
+     feedbackText = findViewById(R.id.feedbackText)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
