@@ -32,6 +32,13 @@ class questionActivity : AppCompatActivity() {
     hackbutton.setOnClickListener { checkAnswer(true) }
     mythutton.setOnclickListener { checkAnswer(false) }
 
+    // Move to next question when Button is clicked
+    nextButton.setOnClickListener {
+          currentIndex++
+
+        
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
