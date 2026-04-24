@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 class questionActivity : AppCompatActivity() {
 
     // keeps track of the current question index
-    var = currentIndex = 0
+     var = currentIndex = 0
 
     // stores the users score
      var score = 0
@@ -20,6 +20,15 @@ class questionActivity : AppCompatActivity() {
      // Link UI elements with XML
      questionText = findViewById(R.id.questionText)
      feedbackText = findViewById(R.id.feedbackText)
+     nextButton = findViewBy(R.id.nextButton)
+
+     val hackButton = findViewById<button>(R.id.hackButton)
+     val mythbutton = findViewById<Button>(R.id.mythbutton)
+
+    // Load the first question when activity starts
+    loadQuestion()
+
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
