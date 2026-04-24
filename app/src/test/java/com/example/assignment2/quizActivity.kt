@@ -5,6 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
 
 class questionActivity : AppCompatActivity() {
+
+    // keeps track of the current question index
+    var = currentIndex = 0
+
+    // stores the users score
+     var score = 0
+
+    // UI components
+     var questionText: textview
+     var feedBack: textView
+     var nextButton: Button
+     
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
