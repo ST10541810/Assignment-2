@@ -28,7 +28,9 @@ class questionActivity : AppCompatActivity() {
     // Load the first question when activity starts
     loadQuestion()
 
-    
+    // set click listeners for answer buttons
+    hackbutton.setOnClickListener { checkAnswer(true) }
+    mythutton.setOnclickListener { checkAnswer(false) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
