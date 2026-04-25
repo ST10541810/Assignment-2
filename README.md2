@@ -1,0 +1,96 @@
+## student information
+Name: Inocencio Nanga
+Student Number ST10541810
+Module: IMAD5112A2
+
+
+
+## Project overview
+the life Hack or urban Myth App is a native Android quiz application developed using Kotlin in Android study.
+the purpose of this app is to help users identify whether common internet life hacks are true productivity tips or simply urban myths.
+
+Users are presented with flashcard-style statements and must choose between:
+Hack (True)
+Myth (False)
+
+At the end of the quiz, the app calculates the users total score and provides person feedback.
+
+
+## Purpose and features
+This application was created to:
+Improve user Knowledge on useful life hacks
+Help users distinguish between facts and myths
+Provide an engaging quiz experience
+
+
+### Main Features:
+Welcome Screen
+Flashcard Question Screen
+Immediate Feedback
+Score Counter
+Final Result Screen
+Review Answers Screen
+
+## Design Considerations
+The app was designed with a simple and user-friendly interface to ensure easy navigation.
+
+### Design decisions include:
+Large readable Button for answer selection
+Minimalist screen layout
+Clear score display
+Easy-to-understand feedback messages
+
+The colour choice and spacing were kept clean to improve user experience.
+
+
+## Application Logic
+The application uses:
+A List of question objects stored in QuestionBack.Kt
+A Loop system to navigate through each flashcard
+Conditional statements to verify user answers
+A score variable to count correct responses
+
+After the last question, the app automatically navigates to the Score Screen.
+
+
+## GitHub and Version Control
+GitHub was used to manege all source code versions throughout development.
+
+The following GitHub practices were applied:
+Creating a remote repository
+Frequent commits after each major chance
+Pushing updated code to GitHub
+
+This ensured backup, version history, and project tracking.
+
+
+##GitHub Actions Automation
+GitHub Actions was implement to automatically build and test the Android project whenever code is pushed to the repository.
+
+This helps ensure That:
+the application compiles correctly,
+there are no broken files,
+the project remains functional on all updates.
+
+
+##Testing and Debugging
+Manual testing was performed on all application screens to varify:
+Button clicks
+screen navigation
+Correct answer checking
+Review functionality
+
+Logcat logging was also used during development for debugging purposes.
+
+## AI Disclosure
+
+Artificial Intelligence tools were used in a limited and supportive capacity during the development of this assignment.
+
+OpenAI ChatGPT was consulted to:
+assist with understanding certain Kotlin programming   structures ,
+generate example code layout,
+improve wording and grammar in documentation,
+and provide guidance on README formatting.
+
+All generated suggestions were reviewed, edited, testes, and implemented manually by the student within Android Studio.
+The final application design, debugging, GitHut setup, screenshots, testing, and submission materials were completed and verified by the student.

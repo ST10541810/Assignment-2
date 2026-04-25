@@ -14,26 +14,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // added a start button to switch to another class
         val startButton = findViewById<Button>(R.id.StartbuttonId)
-
-        // added a val intent to switch from one class to another
         startButton.setOnClickListener {
-
-
-
-
-
-            val intent = Intent( this, QuizActivity::class.java       jnmkk)
+            val intent = Intent(this, QuizActivity::class.java)
             startActivity(intent)
-
-
-
-
-
         }
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -8,10 +8,8 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-// Data class to represent a Question
 data class Question(val text: String, val isHack: Boolean)
 
-// Object to hold the list of questions
 object QuestionBank {
     val questions = listOf(
         Question("Phishing is a type of social engineering.", true),
@@ -24,12 +22,10 @@ object QuestionBank {
 
 class QuizActivity : AppCompatActivity() {
 
-    // Member variables
     private var currentIndex = 0
     private var score = 0
     private val answers = mutableListOf<Boolean>()
 
-    // UI components
     private lateinit var questionText: TextView
     private lateinit var feedbackText: TextView
     private lateinit var nextButton: Button
@@ -41,58 +37,51 @@ class QuizActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_quiz)
 
-        // Link UI elements with XML
+        // Initialize UI components
         questionText = findViewById(R.id.questionText)
         feedbackText = findViewById(R.id.feedbackText)
         nextButton = findViewById(R.id.nextButton)
         hackButton = findViewById(R.id.hackButton)
         mythButton = findViewById(R.id.mythbutton)
 
-        // Load the first question
         loadQuestion()
 
-        // Set click listeners for answer buttons
         hackButton.setOnClickListener {
             checkAnswer(true)
         }
-        
+
         mythButton.setOnClickListener {
             checkAnswer(false)
         }
 
-        // Move to next question when Button is clicked
         nextButton.setOnClickListener {
             currentIndex++
-
             if (currentIndex < QuestionBank.questions.size) {
                 loadQuestion()
                 feedbackText.text = ""
             } else {
-                // Navigate to result screen when quiz ends
+                // Quiz completed, transition to ResultActivity
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra("score", score)
                 intent.putExtra("total", QuestionBank.questions.size)
+                intent.putExtra("answers", answers.toBooleanArray())
                 
-                // Log score for debugging
                 Log.d("QuizApp", "Final Score: $score")
-
+                
                 startActivity(intent)
                 finish()
             }
         }
     }
 
-    // Function to load the current question onto the screen
     private fun loadQuestion() {
         questionText.text = QuestionBank.questions[currentIndex].text
     }
 
-    // Function to check if the user's answer is correct
     private fun checkAnswer(userAnswer: Boolean) {
         val correctAnswer = QuestionBank.questions[currentIndex].isHack
-        
-        // Prevent multiple answers for the same question if needed, 
-        // or just let it update the score and show feedback.
+        answers.add(userAnswer)
+
         if (userAnswer == correctAnswer) {
             score++
             feedbackText.text = "Correct!"
